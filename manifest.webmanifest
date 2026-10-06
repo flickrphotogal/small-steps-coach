@@ -1,0 +1,25 @@
+{
+  "name": "Small Steps Personal Coach",
+  "short_name": "Small Steps",
+  "description": "A private, low-pressure coach for food, movement, outlook, and restarting.",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f1e8",
+  "theme_color": "#365b61",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Small Steps lantern icon</title>
+  <rect width="512" height="512" rx="112" fill="#365b61"/>
+  <path d="M178 175h156l-18 220H196z" fill="#f7f1e8"/>
+  <path d="M207 175c0-49 20-79 49-79s49 30 49 79" fill="none" stroke="#f7f1e8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M224 238h64v104h-64z" fill="#d89a67"/>
+  <path d="M256 218c28 30 35 55 0 91-35-36-28-61 0-91z" fill="#fff3c4"/>
+  <path d="M160 395h192" stroke="#f7f1e8" stroke-width="24" stroke-linecap="round"/>
+</svg>

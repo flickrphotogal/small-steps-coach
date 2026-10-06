@@ -1,0 +1,10 @@
+# Private chat-side state and guidance are not part of the public phone app.
+score.json
+rules.md
+
+# Device backups must never be published.
+small-steps-backup-*.json
+
+# Local editor and operating-system files.
+.DS_Store
+Thumbs.db
