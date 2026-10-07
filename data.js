@@ -5,23 +5,47 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   "use strict";
 
+  const quotes = [
+    { text: "A small step still moves the day.", attribution: "Small Steps" },
+    { text: "You only need the next easy action.", attribution: "Small Steps" },
+    { text: "Restarting counts as progress.", attribution: "Small Steps" },
+    { text: "The minimum is enough for today.", attribution: "Small Steps" },
+    { text: "Curiosity is kinder than pressure.", attribution: "Small Steps" },
+    { text: "One suggestion. One start. One clue.", attribution: "Small Steps" },
+    { text: "Your pace can be quiet and still count.", attribution: "Small Steps" },
+    { text: "Leave the harsh story unfinished.", attribution: "Small Steps" },
+    { text: "Future-you only asked for one favor.", attribution: "Small Steps" },
+    { text: "Ignoring a prompt is not a failure record.", attribution: "Small Steps" },
+    { text: "Food already in the fridge is a gift.", attribution: "Small Steps" },
+    { text: "You can begin in the middle.", attribution: "Small Steps" },
+    { text: "Gentleness is a practical strategy.", attribution: "Small Steps" },
+    { text: "A path appears after the first footstep.", attribution: "Callaway Gardens" },
+    { text: "Nothing needs to be perfect before it begins.", attribution: "Small Steps" },
+    { text: "Choose the option that asks the least of you.", attribution: "Small Steps" },
+    { text: "Water, food, movement: any one of them helps.", attribution: "Small Steps" },
+    { text: "You are allowed to keep it simple.", attribution: "Small Steps" },
+    { text: "A completed tiny thing still unlocks the next clue.", attribution: "Small Steps" },
+    { text: "Today can be ordinary and still be enough.", attribution: "Small Steps" },
+    { text: "Rest is part of the plan, not a detour from it.", attribution: "Small Steps" },
+  ];
+
   const routines = {
     breakfast: [
       {
-        title: "Oatmeal, fruit, and protein",
-        detail: "Plain instant oatmeal with fresh berries or banana. Add Greek yogurt, milk, or a protein shake for staying power.",
+        title: "Oatmeal with mixed berries",
+        detail: "Quaker Original oatmeal with Wyman’s mixed berries. Add milk or yogurt if you want more protein. Eggs are not required for breakfast.",
       },
       {
-        title: "Hummus, raw vegetables, and fruit",
-        detail: "A premade hummus cup or container is enough. No arranging required.",
+        title: "Hummus, Veggie & Cheese Bites, pineapple",
+        detail: "Publix Classic Hummus with the Snack Sensations tray and fresh pineapple. Ranch is fine occasionally.",
       },
       {
-        title: "Cheese, fruit, and raw vegetables",
-        detail: "Individually wrapped cheese and a fresh fruit cup make this nearly automatic.",
+        title: "Cheese, raw vegetables, and fruit",
+        detail: "Use the cheese from the Veggie & Cheese Bites with carrots or celery and pineapple or berries.",
       },
       {
-        title: "Simple fruit-and-protein smoothie",
-        detail: "Use a premade option or a familiar blend. Check flavored additions and dried fruit for sulfites.",
+        title: "Trader Joe’s oatmeal and frozen berries",
+        detail: "Plain oats with TJ’s frozen mixed berries. Pair with yogurt or a protein shake if available.",
       },
     ],
     movement: [
@@ -44,16 +68,24 @@
     ],
     lunch: [
       {
-        title: "Publix chicken or turkey over a premade raw salad",
-        detail: "Read the label for nuts and added sulfites. Eggs are fine occasionally.",
+        title: "Publix cobb-style salad",
+        detail: "Eat the salad as packaged. Egg and ranch are fine occasionally. Skip any add-ons with nuts.",
       },
       {
-        title: "Publix hummus snack plate",
-        detail: "Hummus, raw vegetables, fruit, and cheese or labeled sliced poultry.",
+        title: "Black bean soup with fruit",
+        detail: "Panera black bean soup with a few crackers if wanted, plus guacamole and pineapple.",
       },
       {
-        title: "Grain-and-bean pouch over a raw salad",
-        detail: "Microwave the pouch and pour it over greens. Use a dressing you will actually eat.",
+        title: "Hummus plate from the fridge",
+        detail: "Hummus, Veggie & Cheese Bites, pineapple or berries. Guacamole can stand in for extra fat and flavor.",
+      },
+      {
+        title: "Trader Joe’s Butter Chicken with basmati rice",
+        detail: "Frozen meal, about five minutes. A strong hot option with chicken, tomato-based sauce, and rice.",
+      },
+      {
+        title: "Trader Joe’s Chicken Burrito Bowl",
+        detail: "Chicken, brown rice, black beans, quinoa, cheese, tomato sauce. Skip if cooked peppers or corn feel like too much.",
       },
       {
         title: "Chick-fil-A grilled nuggets and fruit cup",
@@ -64,38 +96,30 @@
         detail: "Customize away any problem toppings and put dressing on the side.",
       },
       {
-        title: "Tropical Smoothie Detox Island Green with protein",
-        detail: "Add whey or pea protein. Supplier ingredients can vary.",
-      },
-      {
-        title: "Mexican chicken salad or bowl",
-        detail: "Choose beans, salsa, raw toppings, and a small amount of rice if wanted.",
-      },
-      {
         title: "Popeyes blackened tenders with red beans and rice",
         detail: "Water or unsweetened tea. Mashed potatoes are an okay comfort variation, not a mistake.",
       },
     ],
     evening: [
       {
-        title: "Hummus with raw vegetables and fruit",
-        detail: "Use a snack cup or the package you already opened.",
+        title: "Hummus with leftover Veggie & Cheese Bites",
+        detail: "Add pineapple or berries. A small plate is enough.",
+      },
+      {
+        title: "Leftover black bean soup",
+        detail: "Reheat the Panera soup. Guacamole or pineapple on the side is optional.",
+      },
+      {
+        title: "Guacamole with pineapple",
+        detail: "Use when energy is low. Add cheese or hummus if you want more staying power.",
+      },
+      {
+        title: "Trader Joe’s hummus snack pack",
+        detail: "Mediterranean hummus with pita chips. Pair with fruit if you have it.",
       },
       {
         title: "Cheese, fruit, and raw vegetables",
-        detail: "A small plate is enough; it does not need to look like dinner.",
-      },
-      {
-        title: "Labeled turkey or chicken with fruit",
-        detail: "Check the current label for added sulfites.",
-      },
-      {
-        title: "Premade soup with bread or crackers",
-        detail: "Choose a nut-free label you tolerate. Cooked blended vegetables are okay.",
-      },
-      {
-        title: "Nut-free premade snack box",
-        detail: "Egg or ranch is fine occasionally.",
+        detail: "Finish what is already open from the snack tray and fruit cups.",
       },
     ],
     outlook: [
@@ -113,47 +137,60 @@
       name: "Publix premade first",
       items: [
         "Snack Sensations Veggie & Cheese Bites with ranch",
-        "Boar’s Head or Sabra hummus-and-pretzel snack cup",
-        "Mini Babybel or GreenWise cheddar with a fresh fruit cup",
-        "Snack Sensations Apple & Cheese Tray with pretzels — check label",
-        "Publix chorizo, white cheddar, cranberry, and papaya pack — check for added sulfites",
-        "Labeled premade soup with bread or crackers",
+        "Publix Classic Hummus",
+        "Panera or Publix black bean soup",
+        "Premade cobb-style or raw salad without nuts; egg is fine occasionally",
+        "Fresh pineapple or fruit cups",
+        "Mild guacamole",
+        "Quaker Original oatmeal",
+        "Frozen mixed berries",
       ],
     },
     {
-      name: "Fresh grab-and-go",
+      name: "Trader Joe’s first",
       items: [
-        "Fresh fruit or fruit cups",
-        "Raw vegetables or snack trays",
-        "Bagged salad greens",
-        "Premade raw salad without nuts; egg is fine occasionally",
+        "Butter Chicken with Basmati Rice (frozen)",
+        "Chicken Burrito Bowl (frozen) — optional if cooked peppers/corn are okay",
+        "Frozen brown rice or quinoa packets",
+        "Frozen mixed berries",
+        "Mediterranean hummus snack pack with pita chips",
+        "Just Chicken or other labeled cooked chicken",
+        "Tomato & Roasted Red Pepper Soup",
+        "Plain oats",
       ],
     },
     {
-      name: "Fill the gaps",
+      name: "Skip or customize",
       items: [
-        "Plain instant oatmeal or oatmeal cups",
-        "Hummus",
-        "Cheese",
-        "Greek yogurt or preferred smoothie protein",
-        "Labeled sliced turkey or chicken",
-        "Labeled oven-roasted chicken",
-        "Nut-free snack boxes",
-        "Microwave grain-and-bean pouches",
-        "Bread or crackers",
+        "Chicken salad snack boxes that include almonds — skip the nuts",
+        "Sargento Balanced Breaks with nuts",
+        "Asparagus risotto",
+        "Meals with golden raisins or dried fruit — check for sulfur dioxide",
       ],
     },
     {
       name: "Final backups",
       items: [
-        "Olive oil or preferred dressing",
-        "Lemon for simple dressing",
+        "Crackers or pita chips",
+        "Cheese you already like",
         "One approved restaurant backup",
       ],
     },
   ];
 
   const restaurants = [
+    {
+      id: "publix",
+      name: "Publix",
+      order: "Cobb-style salad, or black bean soup with guacamole and pineapple",
+      note: "Fridge first. Skip nuts in any snack box. Egg and ranch are fine occasionally. Hummus plus Veggie & Cheese Bites is the lowest-effort backup.",
+    },
+    {
+      id: "traderjoes",
+      name: "Trader Joe’s",
+      order: "Butter Chicken with Basmati Rice, or a Mediterranean hummus snack pack with fruit",
+      note: "Frozen brown rice packets and Just Chicken are useful add-ons. Skip asparagus risotto and any dried-fruit meals listing sulfur dioxide. The Chicken Burrito Bowl is optional if cooked peppers and corn are okay.",
+    },
     {
       id: "chickfila",
       name: "Chick-fil-A",
@@ -184,12 +221,6 @@
       order: "5-piece blackened tenders with red beans and rice",
       note: "Mashed potatoes are an acceptable comfort alternative. Red beans and rice provide more fiber and some protein. Full sulfite certainty is unavailable.",
     },
-    {
-      id: "publix",
-      name: "Publix",
-      order: "Labeled chicken or turkey over a premade raw salad",
-      note: "Publix is the first preference because packaged labels make egg, nut, and added-sulfite checks easier.",
-    },
   ];
 
   const rescue = {
@@ -198,7 +229,7 @@
       grounding: "Put both feet down and take one slower breath out than in.",
       actions: [
         "Open the fridge and touch one approved item. You may stop there.",
-        "Choose the first Publix premade item on your list that is available.",
+        "Choose the first Publix or Trader Joe’s premade item that is available.",
         "Order the saved restaurant default without reopening the menu.",
       ],
     },
@@ -336,5 +367,5 @@
     },
   ];
 
-  return { routines, groceries, restaurants, rescue, chapters };
+  return { quotes, routines, groceries, restaurants, rescue, chapters };
 });

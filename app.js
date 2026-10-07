@@ -139,11 +139,23 @@
     `;
   }
 
+  function todaysQuote() {
+    const list = Data.quotes || [];
+    if (!list.length) return { text: "The minimum is enough for today.", attribution: "Small Steps" };
+    return list[Math.abs(dayIndex()) % list.length];
+  }
+
   function homeView() {
     const info = Store.storyInfo(state);
     const weekend = !isWeekday();
+    const quote = todaysQuote();
     return `
       <section class="view">
+        <article class="quote-card" aria-label="Today’s quote">
+          <p class="eyebrow">TODAY’S QUOTE</p>
+          <p class="quote-text">“${escapeHtml(quote.text)}”</p>
+          <p class="quote-attribution">${escapeHtml(quote.attribution || "Small Steps")}</p>
+        </article>
         <div class="section-heading">
           <p class="eyebrow">${weekend ? "WEEKEND · FOOD PROMPTS ONLY" : "TODAY’S SMALL STEPS"}</p>
           <h2>One suggestion at a time</h2>
@@ -203,14 +215,14 @@
     return `
       <section class="view">
         <div class="section-heading">
-          <p class="eyebrow">PUBLIX FIRST</p>
+          <p class="eyebrow">PUBLIX OR TRADER JOE’S FIRST</p>
           <h2>Plan ahead</h2>
-          <p class="muted">Premade choices come first. Use the rest only to fill gaps.</p>
+          <p class="muted">Use what is already stocked. Premade choices come before restaurant menus.</p>
         </div>
         <div class="notice">
           <strong>Simple label rule</strong>
           Nuts, asparagus, wine, and added sulfites stay out. Egg and ranch are fine occasionally.
-          Check dried fruit and processed meat labels when available.
+          Skip almonds in snack boxes. Check dried fruit for sulfur dioxide.
         </div>
         <div class="grid two">${groceryGroups()}</div>
         <div class="actions">

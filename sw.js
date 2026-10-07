@@ -1,11 +1,11 @@
-const CACHE = "small-steps-v4";
+const CACHE = "small-steps-v5";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./styles.css?v=2",
-  "./data.js?v=1",
+  "./styles.css?v=3",
+  "./data.js?v=2",
   "./state.js?v=1",
-  "./app.js?v=4",
+  "./app.js?v=5",
   "./manifest.webmanifest",
   "./icons/icon-180.png",
   "./icons/icon-192.png",

@@ -302,6 +302,24 @@ textarea { min-height: 92px; resize: vertical; }
 }
 .notice strong { display: block; margin-bottom: 3px; }
 
+.quote-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--moss-soft);
+  padding: 16px 18px;
+}
+.quote-text {
+  margin: 8px 0 8px;
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-size: 1.22rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.quote-attribution {
+  color: var(--muted);
+  font-size: .84rem;
+}
+
 .toast {
   position: fixed;
   left: 50%;
